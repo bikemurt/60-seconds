@@ -1,5 +1,5 @@
-# 60-seconds
-Godot in 60 Seconds! Project for the video series
+# Godot in 60 Seconds!
+Godot in 60 Seconds! This is the ongoing project for the video series. Hopefully going back through the commit history will help you recreate the code.
 
 Video series: https://www.youtube.com/watch?v=VGPd-nzKD40&list=PLBjQlALckGj0
 
