@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://mnqcfoxivawi" path="res://scripts/simple_pause.gd" id="1_tshsw"]
 
-[node name="ProtoSimplePause" type="CanvasLayer" unique_id=2130664466 node_paths=PackedStringArray("resume_button", "quit_button")]
+[node name="Pause" type="CanvasLayer" unique_id=2130664466 node_paths=PackedStringArray("resume_button", "quit_button")]
 process_mode = 3
 script = ExtResource("1_tshsw")
 resume_button = NodePath("Panel/MarginContainer/VBoxContainer/ResumeButton")

@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://qo4oqpvekb25" path="res://scripts/level_1.gd" id="1_rka8t"]
 [ext_resource type="Script" uid="uid://cspa7vls7b6gh" path="res://addons/prototyping_toolkit_3d/utilities/input_setup.gd" id="2_5hph3"]
-[ext_resource type="PackedScene" uid="uid://0mxm5lgf5rjo" path="res://scenes/proto_simple_pause.tscn" id="3_j7kpp"]
-[ext_resource type="PackedScene" uid="uid://brwrydvh54owa" path="res://scenes/proto_third_person_character.tscn" id="4_bjebc"]
+[ext_resource type="PackedScene" uid="uid://0mxm5lgf5rjo" path="res://scenes/pause.tscn" id="3_j7kpp"]
+[ext_resource type="PackedScene" uid="uid://brwrydvh54owa" path="res://scenes/third_person_character.tscn" id="4_bjebc"]
 [ext_resource type="Script" uid="uid://cwvfopl16l1gp" path="res://addons/prototyping_toolkit_3d/objects/simple_floor.gd" id="5_5rr72"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_i5arm"]
@@ -51,9 +51,9 @@ jump_added = true
 pause_added = true
 metadata/_custom_type_script = "uid://cspa7vls7b6gh"
 
-[node name="ProtoSimplePause" parent="." unique_id=2130664466 instance=ExtResource("3_j7kpp")]
+[node name="Pause" parent="." unique_id=2130664466 instance=ExtResource("3_j7kpp")]
 
-[node name="ProtoThirdPersonCharacter" parent="." unique_id=736322721 instance=ExtResource("4_bjebc")]
+[node name="ThirdPersonCharacter" parent="." unique_id=736322721 instance=ExtResource("4_bjebc")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.2930424, 3.131575, 7.409733)
 
 [node name="ProtoSimpleFloor" type="StaticBody3D" parent="." unique_id=1668261646]
