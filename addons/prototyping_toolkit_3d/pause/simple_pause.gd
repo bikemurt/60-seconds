@@ -80,7 +80,7 @@ func update_settings() -> void:
 func _on_sens_xh_slider_drag_ended(_value_changed: bool) -> void:
 	Settings.update_setting(&"sens_x", sens_xh_slider.value)
 
-func _on_sens_yh_slider_drag_ended(value_changed: bool) -> void:
+func _on_sens_yh_slider_drag_ended(_value_changed: bool) -> void:
 	Settings.update_setting(&"sens_y", sens_yh_slider.value)
 
 func _on_invert_y_check_box_pressed() -> void:

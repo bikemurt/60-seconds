@@ -1,8 +1,8 @@
 extends Node
 
-signal settings_changed
-
 const SETTINGS_PATH := "user://settings.save"
+
+signal settings_changed
 
 var settings := {
 	&"sens_x": 0.07,
@@ -15,9 +15,8 @@ func _ready() -> void:
 
 func update_setting(setting_name: StringName, value: float) -> void:
 	settings[setting_name] = value
-	
-	save_settings()
 	settings_changed.emit()
+	save_settings()
 
 func get_setting(setting_name: StringName) -> Variant:
 	return settings[setting_name]
@@ -34,3 +33,4 @@ func load_settings() -> void:
 		var result: Variant = JSON.parse_string(file.get_as_text())
 		if result is Dictionary:
 			settings = result
+		file.close()
