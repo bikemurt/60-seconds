@@ -1,5 +1,5 @@
 @tool
-class_name ProtoThirdPersonCharacter
+class_name ThirdPersonCharacter
 extends CharacterBody3D
 
 @export var speed := 5.0

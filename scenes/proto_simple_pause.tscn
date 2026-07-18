@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://0mxm5lgf5rjo"]
 
-[ext_resource type="Script" uid="uid://mnqcfoxivawi" path="res://addons/prototyping_toolkit_3d/pause/simple_pause.gd" id="1_tshsw"]
+[ext_resource type="Script" uid="uid://mnqcfoxivawi" path="res://scripts/simple_pause.gd" id="1_tshsw"]
 
 [node name="ProtoSimplePause" type="CanvasLayer" unique_id=2130664466 node_paths=PackedStringArray("resume_button", "quit_button")]
 process_mode = 3

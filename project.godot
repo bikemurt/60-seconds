@@ -23,6 +23,13 @@ Settings="*uid://j5mcp30144ub"
 
 window/stretch/mode="canvas_items"
 
+[file_customization]
+
+folder_colors={
+"res://scenes/": "yellow",
+"res://scripts/": "green"
+}
+
 [global_group]
 
 character=""

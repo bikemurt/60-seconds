@@ -1,5 +1,5 @@
 @tool
-class_name ProtoSimplePause
+class_name Pause
 extends CanvasLayer
 
 @export_tool_button("Generate Nodes") var initialize_nodes := func() -> void:
