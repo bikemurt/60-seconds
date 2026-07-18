@@ -27,12 +27,17 @@ window/stretch/mode="canvas_items"
 
 folder_colors={
 "res://scenes/": "yellow",
-"res://scripts/": "green"
+"res://scripts/": "green",
+"res://themes/": "pink"
 }
 
 [global_group]
 
 character=""
+
+[gui]
+
+theme/custom="uid://d2xxxrwb32c1m"
 
 [input]
 
