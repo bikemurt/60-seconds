@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://0mxm5lgf5rjo"]
+
+[ext_resource type="Script" uid="uid://mnqcfoxivawi" path="res://addons/prototyping_toolkit_3d/pause/simple_pause.gd" id="1_tshsw"]
+
+[node name="ProtoSimplePause" type="CanvasLayer" unique_id=2130664466 node_paths=PackedStringArray("resume_button", "quit_button")]
+process_mode = 3
+script = ExtResource("1_tshsw")
+resume_button = NodePath("Panel/MarginContainer/VBoxContainer/ResumeButton")
+quit_button = NodePath("Panel/MarginContainer/VBoxContainer/QuitButton")
+metadata/_custom_type_script = "uid://mnqcfoxivawi"
+
+[node name="Panel" type="Panel" parent="." unique_id=846034990]
+custom_minimum_size = Vector2(400, 400)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1444875183]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1446376103]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=689860]
+layout_mode = 2
+text = "Pause Menu"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=50029426]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=290301796]
+layout_mode = 2
+text = "X Sensitivity"
+
+[node name="SensXHSlider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=312357439]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 0.01
+max_value = 0.2
+step = 0.01
+value = 0.06999999999999999
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=1668954906]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=615753168]
+layout_mode = 2
+text = "Y Sensitivity"
+
+[node name="SensYHSlider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1312163912]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 0.01
+max_value = 0.2
+step = 0.01
+value = 0.06999999999999999
+
+[node name="InvertYCheckBox" type="CheckButton" parent="Panel/MarginContainer/VBoxContainer" unique_id=523892849]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Invert Y"
+
+[node name="ResumeButton" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1373927362]
+layout_mode = 2
+text = "Resume"
+
+[node name="QuitButton" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1272277543]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="drag_ended" from="Panel/MarginContainer/VBoxContainer/HBoxContainer/SensXHSlider" to="." method="_on_sens_xh_slider_drag_ended"]
+[connection signal="drag_ended" from="Panel/MarginContainer/VBoxContainer/HBoxContainer2/SensYHSlider" to="." method="_on_sens_yh_slider_drag_ended"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/InvertYCheckBox" to="." method="_on_invert_y_check_box_pressed"]

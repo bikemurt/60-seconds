@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://brwrydvh54owa"]
+
+[ext_resource type="Script" uid="uid://ug2t64m1nmhx" path="res://addons/prototyping_toolkit_3d/character_controllers/third_person_character.gd" id="1_2bhce"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r3fl7"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_jka67"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i5arm"]
+albedo_color = Color(0.5411765, 0.16862746, 0.8862745, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wc5p8"]
+albedo_color = Color(0, 1, 0, 1)
+
+[node name="ProtoThirdPersonCharacter" type="CharacterBody3D" unique_id=736322721 node_paths=PackedStringArray("camera_3d", "spring_arm", "mesh_instance") groups=["character"]]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+script = ExtResource("1_2bhce")
+camera_3d = NodePath("SpringArm3D/Camera3D")
+spring_arm = NodePath("SpringArm3D")
+mesh_instance = NodePath("MeshInstance3D")
+metadata/_custom_type_script = "uid://ug2t64m1nmhx"
+
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=910913664]
+transform = Transform3D(1, 0, 0, 0, 0.9396926, 0.34202012, 0, -0.34202012, 0.9396926, 0, 1, 0)
+spring_length = 3.0
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1943484896]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1996722041]
+shape = SubResource("CapsuleShape3D_r3fl7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1890743302]
+mesh = SubResource("CapsuleMesh_jka67")
+surface_material_override/0 = SubResource("StandardMaterial3D_i5arm")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D" unique_id=603883896]
+transform = Transform3D(-1.3113417e-08, -0.3, 0, 0.3, -1.3113417e-08, 0, 0, 0, 0.3, 0, 0.39999998, -0.4)
+mesh = SubResource("CapsuleMesh_jka67")
+surface_material_override/0 = SubResource("StandardMaterial3D_wc5p8")
